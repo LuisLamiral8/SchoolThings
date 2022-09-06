@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <form th:action="@{/register}" method="post" th:object="${employee}">
+                <label>Name</label>
+                <input type="text" th:field="*{name}"><br/>
+                <label >Address</label>
+                <textarea th:field="*{address}"cols="30" rows="10"></textarea><br/>
+                <label for="">Married</label> <br>
+                <input type="radio" th:field="*{married}" value="Yes" name="" id="">Yes <br>
+                <input type="radio" th:field="*{married}" value="No" name="" id="">No <br>
+                <label for="">Permanent</label>
+                <input type="checkbox" th:field="*{permanent}" name="" id="">
+                <button type="submit">Register</button>
+                
+            </form>
+        </div>
+    </body>
+</html>

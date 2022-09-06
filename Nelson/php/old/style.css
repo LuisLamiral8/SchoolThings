@@ -1,0 +1,13 @@
+*{
+    text-decoration: none;
+}
+.tabla{
+    text-align: center;
+    border: 2px solid black;
+    width: 40%;
+    
+}
+tr td:nth-child(1) {
+    width: 150px;
+}
+tr td:nth-child(2){width: 35px;}

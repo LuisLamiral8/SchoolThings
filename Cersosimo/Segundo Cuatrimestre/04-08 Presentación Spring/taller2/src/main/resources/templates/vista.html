@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>TODO write content</div>
+        <h1 th:text="${num1} + ${num2}"></h1><hr>
+        <h1 th:if="${num1>5}" th:text="'num1 es mayor que 5'"></h1><hr>
+        <h1 th:unless="${num1>5}" th:text="'num1 no es mayor que 5'"> </h1><hr>
+        <div th:switch='${num1}'>
+            <h1 th:case="5">es 5</h1>
+            <h1 th:case="10">es 10</h1>
+            <h1 th:case="15">es 15</h1>
+            <h1 th:case="20">es 20</h1> <hr>
+        </div>
+        <ul>
+            <li th:each="color: ${colores}" th:text="${color}"></li>
+        </ul> <hr>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Colores</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="color: ${colores}">
+                    <td th:text="${color}"></td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+        
+        <h1 th:text="${#numbers.formatDecimal(num,0,'POINT',2,'COMMA')}"></h1><hr>
+        <h1 th:text="${#calendars.format(fecha,'dd-MM-yyyy')}"></h1>
+    </body>
+</html>
